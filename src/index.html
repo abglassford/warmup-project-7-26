@@ -2,13 +2,42 @@
 <html>
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/yeti/bootstrap.min.css" rel="stylesheet" integrity="sha384-yxFy3Tt84CcGRj9UI7RA25hoUMpUPoFzcdPtK3hBdNgEGnh9FdKgMVM+lbAZTKN2" crossorigin="anonymous">
     <meta charset="utf-8">
-    <title></title>
+    <title>Movie Search API</title>
   </head>
   <body>
-
+    <h2 class: "col-md-7 navbar-header">Movie Search</h2>
+    <form class="form-horizontal col-md-6">
+      <fieldset class: "container">
+        <legend>Initiate New Search Request</legend>
+        <div class="form-group">
+          <label for="inputTitle" class="col-lg-2 control-label">Movie title:</label>
+          <div class="col-lg-10">
+            <input type="text" class="form-control" id="inputTitle" placeholder="Title">
+          </div>
+        </div>
+        <div class="form-group">
+        <label for="genreSelect" class="col-lg-2 control-label">Genre</label>
+        <div class="col-lg-10">
+          <select class="form-control" id="genreSelect">
+            <option></option>
+            <option></option>
+            <option></option>
+            <option></option>
+            <option></option>
+          </select>
+        </div>
+      </div>
+        <div class="form-group">
+          <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+        </fieldset>
+      </form>
     <script type="text/javascript" src="main.js">
-
     </script>
   </body>
 </html>
