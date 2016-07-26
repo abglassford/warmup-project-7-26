@@ -1,13 +1,18 @@
+// document ready
 $(function(){
-  function findMovie (movie){
-    $.ajax({
-      method: 'GET',
-      url: 'http://www.omdbapi.com/?t=' + movie
-    }).done(function(data){
-      var movieData = data
-    })
-  }
+  $('form').on('submit', function (e){
+    e.preventDefault()
+    findMovie($('#inputTitle').val());
+  })
 })
-$('#inputTitle').on('submit'){
-  $('#movieImg').append('<img src="' + movieData + '">')
+
+function findMovie (movie){
+  $.ajax({
+    method: 'GET',
+    url: 'http://www.omdbapi.com/?t=' + movie
+  }).done(function(data){
+    console.log(data);
+    $('#movieImg').append('<img src="' + data.Poster + '">')
+    $('#movieInfo').append('<p>' + data.Title + '</p>')
+  })
 }
