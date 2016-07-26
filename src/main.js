@@ -4,7 +4,10 @@ $(function(){
       method: 'GET',
       url: 'http://www.omdbapi.com/?t=' + movie
     }).done(function(data){
-      console.log(data);
+      var movieData = data
     })
   }
 })
+$('#inputTitle').on('submit'){
+  $('#movieImg').append('<img src="' + movieData + '">')
+}
