@@ -5,7 +5,6 @@ $(function(){
     findMovie($('#inputTitle').val());
   })
 })
-
 function findMovie (movie){
   $.ajax({
     method: 'GET',
@@ -14,5 +13,12 @@ function findMovie (movie){
     console.log(data);
     $('#movieImg').append('<img src="' + data.Poster + '">')
     $('#movieInfo').append('<p>' + data.Title + '</p>')
+    var genreArr = data.Genre.split(', ')
+    console.log(genreArr);
+    for(var i = 0; i < genreArr.length; i++){
+      $('#genreSelect').append('<option id= "op' + [i] + '">' + genreArr[i] + '</option>')
+      console.log(genreArr[i]);
+    }
+
   })
 }
