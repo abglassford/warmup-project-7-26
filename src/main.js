@@ -1,5 +1,4 @@
 $(function(){
-
     function findMovie (movie){
       $.ajax({
         method: 'GET',
@@ -8,6 +7,4 @@ $(function(){
         console.log(data);
       })
     }
-
-  findMovie('Frozen')
 })
